@@ -62,6 +62,7 @@ html {
 .text-3 {
     font-size: 1.25rem;
     font-weight: 600;
+    line-height: 1;
     color: var(--stone-600);
 }
 .text-4-bold,
@@ -82,18 +83,37 @@ main {
     padding: 128px 48px;
 }
 
-ul,
-ol {
-    padding-left: 16px;
+ul {
+    list-style: none;
 
     & li {
-        padding-left: 28px;
+        position: relative;
+        padding-left: 40px; /* espace entre le point et le texte */
         margin-bottom: 8px;
+        line-height: 1.5;
 
-        &::marker {
-            font-size: 12px;
+        &::before {
+            content: '•';
+            position: absolute;
+            left: 6px;
+            top: 50%;
+            font-size: 20px;
             color: var(--rose-800);
+            transform: translateY(-50%);
         }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+ol {
+    padding-left: 24px;
+
+    & li {
+        padding-left: 16px;
+        margin-bottom: 8px;
 
         &:last-child {
             margin-bottom: 0;
