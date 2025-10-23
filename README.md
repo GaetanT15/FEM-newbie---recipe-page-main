@@ -33,9 +33,9 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### What I learned
 
-I learnd how to import proprely custom font instead of using google font. And the best format to use in future project which is WOFF2.
+I learned how to properly import custom fonts instead of using Google Fonts, and the best format to use in future projects, which is WOFF2.
 
-I used "font-display: swap" to offer a better UX by loading a default font à the loading of the page and then load the real font when it's ready
+I used 'font-display: swap' to provide a better UX by loading a default font while the page is loading and then loading the real font when it's ready."
 
 ```css
 @font-face {
