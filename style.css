@@ -80,7 +80,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 128px 48px;
+    padding: 128px 76px;
 }
 
 ul {
@@ -140,6 +140,8 @@ ol li::marker {
         display: block;
         width: 100%;
         border-radius: 12px;
+        height: 300px;
+        object-fit: cover;
     }
 
     & .body {
@@ -205,16 +207,33 @@ ol li::marker {
     color: hsl(228, 45%, 44%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     main {
         padding: 0;
     }
 
+    .text-1 {
+        font-size: 2.25rem;
+        font-weight: 500;
+    }
+
     .card {
         padding: 0;
+        max-width: unset;
+        border-radius: 0;
+        padding-bottom: 64px;
+
+        & img {
+            border-radius: 0;
+            height: 171px;
+        }
 
         & .body {
             padding: 0 32px;
         }
+    }
+
+    .attribution {
+        display: none;
     }
 }
