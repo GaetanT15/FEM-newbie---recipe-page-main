@@ -42,6 +42,10 @@ html {
     color: var(--stone-600);
 }
 
+body {
+    position: relative;
+}
+
 .text-1,
 .text-2 {
     font-family: 'Young Serif', serif;
@@ -199,12 +203,15 @@ ol li::marker {
 }
 
 .attribution {
-    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.75rem;
     text-align: center;
-}
+    width: 100%;
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    & a {
+        color: var(--stone-600);
+    }
 }
 
 @media (max-width: 767px) {
